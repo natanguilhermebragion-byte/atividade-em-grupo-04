@@ -1,8 +1,7 @@
 <?php
 
-class Grupo04 { 
+class Sistema {
     public function calculaMultaVeiculo($velocidadeReal, $velocidadePermitida, $ehZonaEscolar) {
-        
         if ($velocidadeReal <= 0 || $velocidadePermitida <= 0) return "erro";
         if ($velocidadePermitida < 20 || $velocidadePermitida > 120) return "erro";
         if ($velocidadeReal > 300) return "erro";
@@ -30,7 +29,7 @@ class Grupo04 {
     }
 }
 
-$sistema = new Grupo04();
+$sistema = new SistemaTransito();
 
 echo $sistema->calculaMultaVeiculo(60, 60, false) . "<br>";
 echo $sistema->calculaMultaVeiculo(70, 60, false) . "<br>";
